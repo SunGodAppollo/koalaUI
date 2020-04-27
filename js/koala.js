@@ -1,7 +1,3 @@
-
-
-
-
 (function (window, document) {
 	//flexible
   var docEl = document.documentElement
@@ -52,10 +48,17 @@
   //==============================================================================================
   
   //轮播
-	var koalaSwiper=function(el,ActionTime){
-		console.log(el);
+	var koalaSwiper=function(json){
+    // 获得数据
+    var el=json.el;
+    var actionTime=json.actionTime;
+    //数据验证 
+    if(!el){throw "koala.js ERROR:el is not defind"}
+    //改变CSS
 		var index=1;
-		var koalaSwiperBoxContent=document.getElementsByClassName(el)[0];
+    var koalaSwiperBoxContent=document.getElementsByClassName(el)[0];
+    if(!koalaSwiperBoxContent){throw "koala.js ERROR:el "+el+" is not find"}
+    
 		var koalaSwiperItem=koalaSwiperBoxContent.getElementsByClassName('koala-swiper-item');
 		var swiperItemNum=koalaSwiperBoxContent.childElementCount;
 		
@@ -64,9 +67,7 @@
     		koalaSwiperItem[j].style.width=(100/swiperItemNum)+'%';
 		}
 		
-		
-		
-		console.log(swiperItemNum);
+    //定时轮播
 		setInterval(function(){
 			var koalaSwiperBoxContent=document.getElementsByClassName(el)[0];
 			if(index>=swiperItemNum){
@@ -74,10 +75,21 @@
 			}
 			koalaSwiperBoxContent.style.left=-(index*100)+'%';			
 			index++;
-		},ActionTime);
+		},actionTime);
 	}
 	window.koalaSwiper=koalaSwiper;
-	//var koalaSwiperBoxContent=document.getElementsByClassName('koala-swiper-boxContent')[0];
+  //轮播结束
+
+  //弹窗
+  var koalaAlert=function(json){
+        // 获得数据
+        var msg=json.msg;
+        //
+        alert(msg);
+  }
+  window.koalaAlert=koalaAlert;
+  //弹窗结束
+
 }(window, document))
 
 
