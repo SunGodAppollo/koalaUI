@@ -17,6 +17,9 @@ html,body,h1,div,button{
 html::-webkit-scrollbar {
   display: none; /* Chrome Safari */
 }
+body{
+	font-size: .3rem;
+}
 
 div{
 	/*默认所有的文字居中*/
@@ -84,7 +87,8 @@ a{
 }
 /* 盒子 */
 .koala-box{
-	box-shadow: 0 1px 3px 0 rgba(206, 210, 214, 0.6)
+	box-shadow: 0 0 5px #888;
+	/* box-shadow: 0 1px 3px 0 rgba(206, 210, 214, 0.6) */
 }
 
 .fl{

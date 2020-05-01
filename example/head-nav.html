@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>div盒子</title>
+    <!--css-->
+	<link rel="stylesheet" type="text/css" href="../css/koala.css"/>
+	 <style>
+		 .head-nav{
+			 height: 1.3rem;
+			 line-height:  1.3rem;
+			 background-color: #009cf4;
+			 color: #ffffff;
+			 display: flex;
+		 }
+		 .head-nav-left{
+			 flex: 1;
+		 }
+		 .head-nav-title{
+			flex: 4;
+		 }
+		 .head-nav-right{
+			flex: 1;
+		 }
+	 </style>
+    <!--koala js文件引入-->
+    <script src="../js/koala.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>	
+	<!--需要引入css 和js-->
+
+	<div class="koala-box head-nav">
+		<div class="head-nav-left">返回</div>
+		<div class="head-nav-title">标题</div>
+		<div class="head-nav-right">消息</div>
+	</div>
+
+	<div style="height: 1rem;"></div>
+
+	<div class="koala-box head-nav">
+		<div class="head-nav-left"><</div>
+		<div class="head-nav-title">标题</div>
+		<div class="head-nav-right">消息</div>
+	</div>
+	
+	
+	
+	
+
+</body>
+</html>
